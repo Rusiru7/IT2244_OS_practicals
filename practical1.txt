@@ -1,0 +1,20 @@
+01-Print hello world!
+
+#include<stdio.h> //input output functionalities
+
+int main(){
+	printf("Hello World!\n");
+return 0;
+}
+
+//get the permision.
+gcc myfirstprogram.c -o myfirstprogram
+
+//run the program.
+./myfirstprogram
+
+//output
+asiri@DESKTOP-0MK28KD:~$ gcc 1.c -o 1
+asiri@DESKTOP-0MK28KD:~$ ./1
+Hello World!
+asiri@DESKTOP-0MK28KD:~$

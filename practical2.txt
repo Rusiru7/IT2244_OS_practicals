@@ -1,0 +1,24 @@
+02 - variables
+
+#include<stdio.h>
+int main(){
+        int age=25;
+        printf("%d\n",age);
+
+        age=31;
+        printf("New age:%d\n",age);
+
+        int a=5;
+        int b=a;
+        printf("A: %d\n",a);
+        printf("B: %d",b);
+return 0;
+}
+
+asiri@DESKTOP-0MK28KD:~$ vi 2.c
+asiri@DESKTOP-0MK28KD:~$ gcc 2.c -o 2
+asiri@DESKTOP-0MK28KD:~$ ./2
+25
+New age:31
+A: 5
+B: 5asiri@DESKTOP-0MK28KD:~$

@@ -1,0 +1,29 @@
+Calculator
+
+#include<stdio.h>
+
+int main(){
+	int a;
+	printf("Enter a: ");
+	scanf("%d", &a);
+	int b;
+	printf("Enter b: ");
+	scanf("%d", &b);
+	printf("Sum: %d\n", (a+b));
+	printf("Sub: %d\n", (a-b));
+	printf("Mul: %d\n", (a*b));
+	printf("Div: %d\n", (a/b));
+	printf("Remainder: %d\n", (a%b));
+	
+return 0;
+}
+asiri@DESKTOP-0MK28KD:~$ vi 5.c
+asiri@DESKTOP-0MK28KD:~$ gcc 5.c -o 5
+asiri@DESKTOP-0MK28KD:~$ ./5
+Enter a: 11
+Enter b: 33
+Sum: 44
+Sub: -22
+Mul: 363
+Div: 0
+Remainder: 11
