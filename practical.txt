@@ -1,0 +1,170 @@
+Q1) Get the calender and date
+
+asiri@DESKTOP-0MK28KD:~$ cal
+Command 'cal' not found, did you mean:
+  command 'cat' from deb coreutils (9.4-2ubuntu2)
+  command 'col' from deb bsdextrautils (2.39.3-9ubuntu6.1)
+  command 'cxl' from deb ndctl (76-1ubuntu1)
+Try: sudo apt install <deb name>
+
+
+asiri@DESKTOP-0MK28KD:~$ date
+Wed May 14 13:03:30 +0530 2025
+
+Q2)Get the student name and marks for the 3 subjects from user then calculate the "Total" and "Average"
+
+echo 'Enter the name: '
+read name
+echo 'Enter the mark for subject 1: '
+read subject1
+echo 'Enter the mark for subject 2: '
+read subject2
+echo 'Enter the mark for subject 3: '
+read subject3
+
+Total=$(($subject1+$subject2+$subject3))
+avg=$(($Total/3))
+
+echo 'Total: '$Total
+echo 'Average: '$avg
+
+
+asiri@DESKTOP-0MK28KD:~$ vi Q2.sh
+asiri@DESKTOP-0MK28KD:~$ chmod 777 Q2.sh
+asiri@DESKTOP-0MK28KD:~$ ./Q2.sh
+Enter the name:
+asiri
+Enter the mark for subject 1:
+78
+Enter the mark for subject 2:
+65
+Enter the mark for subject 3:
+100
+Total: 243
+Average: 81
+
+Q3)Create calculator with arithmetic operators
+
+echo 'Enter the first number: '
+read x
+echo 'Enter the second number: '
+read y
+
+summation=$(($x+$y))
+substraction=$(($x-$y))
+Division=$(($x/$y))
+Multiplication=$(($x*$y))
+
+echo 'Summattion:  '$summation
+echo 'Substraction: ' $substraction
+echo 'Division: ' $Division
+echo 'Multiplication: ' $Multiplication
+
+
+asiri@DESKTOP-0MK28KD:~$ vi Q3.sh
+asiri@DESKTOP-0MK28KD:~$ chmod 777 Q3.sh
+asiri@DESKTOP-0MK28KD:~$ ./Q3.sh
+Enter the first number:
+5
+Enter the second number:
+2
+Summattion:  7
+Substraction:  3
+Division:  2
+Multiplication:  10
+
+Q4)Get the days based on the user input number 
+
+echo 'Enter the number: '
+read number
+
+case $number in
+1)echo 'Monday';;
+2)echo 'Tuesday';;
+3)echo 'Wednesday';;
+4)echo 'Thursday';;
+5)echo 'Friday';;
+6)echo 'Saturday';;
+7)echo 'Sunday';;
+*)echo 'Invalid number!';;
+esac
+
+asiri@DESKTOP-0MK28KD:~$ vi Q4.sh
+asiri@DESKTOP-0MK28KD:~$ chmod 777 Q4.sh
+asiri@DESKTOP-0MK28KD:~$ ./Q4.sh
+Enter the number:
+5
+Friday
+
+
+
+Q5)Verify whether your user name is correct or not.(Use your name as input)
+output:- Enter user name:
+         Mino
+		 User name is correct
+		 Enter user name:
+		 Pasi
+		 Username is incorrect
+
+echo 'Enter user name:'
+read name
+username="Mino"
+
+if [ "$username" == "$name" ]; then
+echo 'Username is correct'
+else
+echo 'Username is incorrect'
+fi
+
+
+asiri@DESKTOP-0MK28KD:~$ vi Q5.sh
+asiri@DESKTOP-0MK28KD:~$ chmod 777 Q5.sh
+asiri@DESKTOP-0MK28KD:~$ ./Q5.sh
+Enter user name:
+Mino
+Username is correct
+asiri@DESKTOP-0MK28KD:~$ ./Q5.sh
+Enter user name:
+asiri
+Username is incorrect
+		 
+		 
+Q6)
+
+
+
+  Output:- Enter two numbers:
+            7 5
+			7 is greater than 5
+			 
+   Output:- Enter two numbers:
+            1 9
+			1 is greater than 9
+	
+echo 'Enter two numbers: '
+read num1 num2
+
+if [ $num1 -gt $num2 ]; then
+echo "$num1 is greater than $num2"
+elif [ $num1 -lt $num2 ]; then
+echo "$num1 is less than $num2"
+else
+echo "$num1 is equal to $num2"
+fi	
+			
+
+asiri@DESKTOP-0MK28KD:~$ vi Q6.sh
+asiri@DESKTOP-0MK28KD:~$ chmod 777 Q6.sh
+asiri@DESKTOP-0MK28KD:~$ ./Q6.sh
+Enter two numbers:
+7 5
+7 is greater than 5
+asiri@DESKTOP-0MK28KD:~$ ./Q6.sh
+Enter two numbers:
+8 9
+8 is less than 9
+asiri@DESKTOP-0MK28KD:~$ ./Q6.sh
+Enter two numbers:
+4 4
+4 is equal to 4
+			
