@@ -1,0 +1,120 @@
+//display the calender
+
+asiri@DESKTOP-0MK28KD:~$ cal
+Command 'cal' not found, did you mean:
+  command 'cat' from deb coreutils (9.4-2ubuntu2)
+  command 'col' from deb bsdextrautils (2.39.3-9ubuntu6.1)
+  command 'cxl' from deb ndctl (76-1ubuntu1)
+Try: sudo apt install <deb name>
+
+//display the date in 'DD' format
+asiri@DESKTOP-0MK28KD:~$ date +%d
+14
+
+
+//display the month in 'MM' format
+asiri@DESKTOP-0MK28KD:~$ date +%m
+05
+cal
+//display the year in 'YY' format
+asiri@DESKTOP-0MK28KD:~$ date +%y
+25
+
+//display the year in 'MM/DD/YY' format
+asiri@DESKTOP-0MK28KD:~$ date +%D
+05/14/25
+
+//display the year in 'YYYY' format
+asiri@DESKTOP-0MK28KD:~$ date +%Y
+2025
+
+//display the month in word format
+asiri@DESKTOP-0MK28KD:~$ date +%B
+May
+
+//display the month in word format in three words
+asiri@DESKTOP-0MK28KD:~$ date +%b
+May
+
+//display the day in word format
+asiri@DESKTOP-0MK28KD:~$ date +%A
+Wednesday
+
+//display the month in word format in three words
+asiri@DESKTOP-0MK28KD:~$ date +%a
+Wed
+
+
+
+//Example 01
+
+echo "Who are you?"
+read name
+echo "Enter number 1"
+read x
+echo "Enter number 2"
+read y
+echo "Enter number 3"
+read z
+
+sum=$(($x+$y+$z))
+avg=$(($sum/3))
+echo "Hi" $name
+echo "Summation: " $sum
+echo "Average: " $avg
+
+asiri@DESKTOP-0MK28KD:~$ vi example01.sh
+asiri@DESKTOP-0MK28KD:~$ ls
+aaa.csv  example01.sh
+asiri@DESKTOP-0MK28KD:~$ chmod 777 example01.sh
+asiri@DESKTOP-0MK28KD:~$ ls
+aaa.csv  example01.sh
+asiri@DESKTOP-0MK28KD:~$ ./example01.sh
+Who are you?
+asiri
+Enter number 1
+3
+Enter number 2
+5
+Enter number 3
+7
+Hi asiri
+Summation:  15
+Average:  5
+
+
+//Example 02
+Read two number from user and print 
+addition, subtraction, multiplication and divition.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ vi example02.sh
+
+echo "Enter a"
+read a
+echo "Enter number b"
+read b
+
+sum=$(($a+$b))
+sub=$(($a-$b))
+mul=$(($a*$b))
+div=$(($a/$b))
+
+echo "Summation	" $sum
+echo "Subtraction	" $sub
+echo "Multiplication	" $mul
+echo "Division	" $div
+
+
+asiri@DESKTOP-0MK28KD:~$ vi example02.sh
+asiri@DESKTOP-0MK28KD:~$ ls
+aaa.csv  example01.sh  example02.sh
+asiri@DESKTOP-0MK28KD:~$ chmod 777 example02.sh
+asiri@DESKTOP-0MK28KD:~$ ./example02.sh
+Enter a
+4
+Enter number b
+3
+Summation        7
+Subtraction      1
+Multiplication   12
+Division         1
